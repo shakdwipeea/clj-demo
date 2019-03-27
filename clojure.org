@@ -1,0 +1,59 @@
+* Into to clojure
+
++ Lisp + jvm = clojure
+
+** Why Lisp
+
+*** Programmable programming language
+
++ Homoiconicity, macros et al.
+
+#+BEGIN_SRC clojure
+(defmacro unless [pred a b]
+  `(if (not ~pred) ~a ~b))
+;; usage:
+
+(unless false (println "Will print") (println "Will not print"))
+#+END_SRC
+
+
++ Advantages: core.async / condition system
+
+*** Interactive Exploratory programming
+
+
+** Why Clojure
+
+*** Simple
+
++ everything is a function
++ infix syntax
+
+*** Jvm support
+
++ Neat ffi
+eg. 
+
+#+BEGIN_SRC clojure
+(js/window)
+
+(System.out/prinln "Hello")
+#+END_SRC
+
+*** Repl
++ read-eval-print-loop
+
+*** Concurrency
+
++ Immutable by default
+
++ Var: Local scope
+
++ Atom: Atomic field (like AtomicBoolean in Java)
+
++ Agent: Async programming (similar to the Actor system in Scala)
+
++ Ref: STM (Software Transaction Memory) 
+*** Clojurescript
+
+** Example:
